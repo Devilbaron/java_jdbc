@@ -1,10 +1,9 @@
 
 import java.sql.Connection;
 
-import dao.StudentDAO;
-import dbentity.Students;
+import dao.UsersDAO;
+import dbentity.Users;
 import util.DBHelper;
-import java.util.Date;
 
 public class Main {
     public static void main(String args[])
@@ -17,9 +16,9 @@ public class Main {
 
             System.out.println(conn1==conn2);
 
-            Students s = new Students(3,"devil","123",22,"男","北京市海淀区","2017-08-09 10:22:22");
+            Users s = new Users(4,"baron","456",21,"男","北京市朝阳区","2017-08-07 09:22:22");
 
-            StudentDAO udao = new StudentDAO();
+            UsersDAO udao = new UsersDAO();
             if (udao.addStudent(s)){
                 System.out.println("添加成功");
             }else
